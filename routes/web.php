@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',function(){
     return "Hello";
+});
+Route::get('/form',function(){
+    return view('home');
+});
+
+
+
+Route::post('get-my',function(Request $request){
+  $name = $request->input('name');
+
+  return redirect('/');
 });

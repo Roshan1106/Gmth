@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-
+    <form action="<?=url('get-my') ?>" method="post">
+        <input type="text" name="name">
+        <input type="submit">
+        <input type="hidden" name="_token" value="<?=csrf_token() ?>">
+    </form>
 </body>
 </html>
